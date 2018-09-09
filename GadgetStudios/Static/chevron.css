@@ -1,0 +1,37 @@
+.chevron {
+   position: relative;
+   text-align: center;
+   padding: 200px;
+   margin-bottom: 6px;
+   height: auto;
+   width: 100%;
+   margin-top: -35px;
+ }
+ .chevron:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 50.1%;
+   background: white;
+   -webkit-transform: skew(0deg, 4deg);
+   -moz-transform: skew(0deg, 4deg);
+   -ms-transform: skew(0deg, 4deg);
+   -o-transform: skew(0deg, 4deg);
+   transform: skew(0deg, 4deg);
+ }
+ .chevron:after {
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100%;
+   width: 50.1%;
+   background: white;
+   -webkit-transform: skew(0deg, -4deg);
+   -moz-transform: skew(0deg, -4deg);
+   -ms-transform: skew(0deg, -4deg);
+   -o-transform: skew(0deg, -4deg);
+   transform: skew(0deg, -4deg);
+   }​

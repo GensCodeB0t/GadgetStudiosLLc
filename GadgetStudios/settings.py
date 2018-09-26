@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'GadgetStudios.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'GadgetStudios',
-        'USER': 'postgres',
-        'PASSWORD': 'Marshall1943!',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': '###################',
+        'NAME': '############',
+        'USER': '##########',
+        'PASSWORD': '############',
+        'HOST': '#############',
+        'PORT': '##########',
     }
 }
 

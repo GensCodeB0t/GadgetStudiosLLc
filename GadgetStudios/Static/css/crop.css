@@ -1,0 +1,10 @@
+.crop_carousel_item {
+  overflow: hidden;
+  width: 100vw; /* Could also use width: 100%; */
+  height: auto;
+
+}
+.crop_carousel_item img {
+  object-fit: cover;
+  height: 100vh;
+}

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'prg_languages.apps.PrgLanguagesConfig',
     'services_provided.apps.ServicesProvidedConfig',
+    'social_networks.apps.SocialNetworksConfig',
+    'frontpage.apps.FrontpageConfig',
 ]
 
 MIDDLEWARE = [

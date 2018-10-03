@@ -55,7 +55,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="4">Owr Work</a>
+              <a class="nav-link" href="#" data-scroll-nav="4">Languages</a>
             </li>
 
             <li class="nav-item">
@@ -109,7 +109,9 @@
 
           <div class="col-12 s-title-per-v2 text-center">
             <h4 class="color-white">About</h4> <br/>
-            <img class="logo-1" src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}">
+            <div class="logo">
+              <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}">
+            </div>
           </div>
 
           <div class="col-lg-12 sm-mb-50">
@@ -119,7 +121,6 @@
                 <a href="#" data-scroll-nav="7" class="btn m-0 fleft">Contact Gadget</a>
               </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -129,7 +130,7 @@
 
     <!-- Services
     ================================================== -->
-    <section class="carousel slide" data-ride="carousel">
+    <section class="carousel slide" data-ride="carousel" data-interval="2500" data-scroll-index='3'>
       <div class="carousel-inner">
         {% for service in services_provided %}
         {% if forloop.counter0 == 0 %}
@@ -137,18 +138,22 @@
           {% else %}
           <div class="carousel-item">
             {% endif %}
-            <div class="crop_carousel_item">
+            <div class="crop_item">
               <div class="greyimg">
                 <img class="img-fluid " src="{{ service.image.url }}" title="{{ service.description }}" alt="{{ service.description }}">
               </div>
             </div>
             <div class="carousel-content">
-              <h1 class="display-4"><b>{{ service.description }}</b></h1>
+              <h1>{{ service.description }}</h1>
             </div>
             </div>
           {% endfor %}
         </div>
+        <div class="carousel-title">
+          <h4><b>Services Provided</b></h4>
+        </div>
       </section>
+
 
     <!-- End Services
     ================================================== -->
@@ -161,86 +166,33 @@
       .parallax { background-image:url({{ front_page.programming_language_image.url }}); }
     </style>
 
-    <section class="parallax services services-style2 section-padding ohidden"  data-background-color="transparent" data-scroll-index='3'>
+    <section class="parallax languages languages-style2 section-padding ohidden"   data-scroll-index='4'>
       <div class="container">
         <div class="row">
-
           <div class="col-12 s-title-per-v2 s-title-per-v2-w text-center">
-            <h4>Gadget Services</h4>
+            <h4>Programming Languages Used... So Far</h4>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-30">
-            <div class="services-box box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-brush lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Web design</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+          {% for language in languages %}
+            <div class="col-lg-4 col-md-6 mb-30">
+              <div class="languages-box box-padding p-relative text-center">
+                <div class="box">
+                  <div class="details">
+                    <div class="icon">
+                      <img src="{{ language.image.url }}">
+                      <h4 class="title-box sub-tit pb-10 mb-20">{{ language.title }}</h4>
+                    </div>
+                    <div class="text">
+                      <h4>{{ language.title }}</h4>
+                      <p>{{ language.description }}</p>
+                      <br/>
+                      <a href="{{ language.source_link }}" target="_blank" style="color: blue;">SOURCE</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-30">
-            <div class="services-box box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-cogs lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Web development</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-30">
-            <div class="services-box box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-camera lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Photography</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 xs-mb-30">
-            <div class="services-box  box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-phone lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Responsive Design</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 xs-mb-30">
-            <div class="services-box box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-pie-chart lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Seo Freindly</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="services-box box-padding p-relative text-center"  data-background-color="#121212">
-              <div class="icon">
-                <i class="jam jam-wrench lg-icon color-white"></i>
-              </div>
-              <div class="text">
-                <h4 class="title-box sub-tit pb-10 mb-20">Support</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
-              </div>
-            </div>
-          </div>
-
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -249,7 +201,7 @@
 
     <!-- Portfolio
     ================================================== -->
-    <section class="portfolio portfolio-style2 section-padding ohidden" data-background-color="#121212" data-scroll-index='4'>
+    <section class="portfolio portfolio-style2 section-padding ohidden" data-background-color="#121212" data-scroll-index='5'>
       <div class="container">
         <div class="row">
 
@@ -356,7 +308,7 @@
 
     <!-- testimonial
     ================================================== -->
-    <section class="testimonial-style2 section-padding section-padding ohidden" data-background-color="#232323" data-scroll-index='5'>
+    <section class="testimonial-style2 section-padding section-padding ohidden" data-background-color="#232323" data-scroll-index='6'>
       <div class="container">
         <div class="row">
 
@@ -410,7 +362,7 @@
 
     <!-- Blog
     ================================================== -->
-    <section class="blog-style2 section-padding ohidden"  data-background-color="#121212" data-scroll-index='6'>
+    <section class="blog-style2 section-padding ohidden"  data-background-color="#121212" data-scroll-index='7'>
       <div class="container">
         <div class="row">
 
@@ -493,7 +445,7 @@
 
     <!-- contact
     ================================================== -->
-    <section class="contact contact-default section-padding  ohidden"  data-background-color="#232323" data-scroll-index='7'>
+    <section class="contact contact-default section-padding  ohidden"  data-background-color="#232323" data-scroll-index='8'>
       <div class="container">
         <div class="row">
 

@@ -20,6 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# TODO: Rewrite the SECRET_KEY to random string generator before production
 SECRET_KEY = 'eg5r$a1fcjapakff30xtapvpn)_e#!w)gyi1sbaprkm22t7khd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -81,12 +83,12 @@ WSGI_APPLICATION = 'GadgetStudios.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': '###################',
-        'NAME': '############',
-        'USER': '##########',
-        'PASSWORD': '############',
-        'HOST': '#############',
-        'PORT': '##########',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'GadgetStudios',
+        'USER': 'postgres',
+        'PASSWORD': 'Marshall1943!',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

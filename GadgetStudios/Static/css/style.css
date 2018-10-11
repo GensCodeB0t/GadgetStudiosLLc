@@ -985,7 +985,7 @@ p {
     color: #fff; }
   .theme-dark .navbar .active {
     position: relative;
-    color: #ccc !important; }
+    color: #2388ed !important; }
   .theme-dark .nav-scroll {
     background: #121212; }
     .theme-dark .nav-scroll .navbar-nav > li > a {
@@ -998,7 +998,7 @@ p {
       background-color: #ccc; }
     .theme-dark .nav-scroll .active {
       position: relative;
-      color: #ccc !important; }
+      color: #2388ed !important; }
   .theme-dark .filtering {
     border: none  !important; }
     .theme-dark .filtering button {

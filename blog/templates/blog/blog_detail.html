@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="discrption" content="parallax one page">
+    <meta name="keyword" content="agency, business, corporate, creative, freelancer, interior, joomla theme, K2 Blog, minimal, modern, multipurpose, personal, portfolio, responsive, simple">
+
+    <!-- Template Title -->
+    <title>Gadget Development Studios LLC</title>
+
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+
+    <!-- custom styles (optional) -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/plugins.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body class="theme-dark">
+
+
+
+      <!-- Navbar
+    ================================================== -->
+    <nav class="navbar navbar-style2 navbar-expand-lg" style="position: static; background: #232323;">
+      <div class="container">
+
+        <a  href="{% url 'home' %}">
+          <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}" class="logo-1">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a class="nav-item nav-link active" href="{% url 'blog_home' %}">Blogs</a>
+            </li>
+
+            {% for social_network in social_networks %}
+            <li class="nav-item" style="padding-left: 25px; padding-right: 25px">
+              <div class="scoial-icon">
+                <a href="{{ social_network.link }}" target="_blank" class="t-shadow-1 color-white">
+                  <img src="{{ social_network.image.url }}" alt="{{ social_network.name }}" title="{{ social_network.name }}" >
+                </a>
+              </div>
+            </li>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar
+    ================================================== -->
+
+
+    <div class="pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="margin: 0px 0px 0px 0px; padding-bottom: 50px; background: #333;">
+      <div class="my-3 py-3">
+        <h2 class="display-5">Gadget Blog</h2>
+        <p class="lead">{{ blog.title }}</p>
+      </div>
+      <div class="bg-light shadow-sm mx-auto" style="border-radius: 30px 30px 30px 30px;">
+        <img class="img-responsive" src="{{ blog.image.url }}" alt="{{ blog.title }}" style="padding-top: 50px; width:50vw; height: auto;">
+        <div style="padding-top: 50px; padding-bottom: 50px; margin: 20px 20px 20px 20px;">
+          <p style="color:#333;">{{ blog.body }}</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer-style-2 p-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="brand text-center m-auto p-relative w-100">
+            <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}">
+          </div>
+
+          <div class="scoial-icon text-center m-auto p-relative mt-30">
+          {% for social_network in social_networks %}
+            <a href="{{ social_network.link }}" target="_blank" class="t-shadow-1 color-white"><img src="{{ social_network.image.url }}" alt="{{ social_network.name }}" title="{{ social_network.name }}"></a>
+          {% endfor %}
+          </div>
+
+          <div class="cop text-center w-100 mt-30">
+            <h6 class="fz-14 fw500">© All Rights Reserved - 2018 Gadget Development Studios LLC.</h6>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer
+    ================================================== -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- custom JavaScript -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+</html>

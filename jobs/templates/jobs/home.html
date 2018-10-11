@@ -25,56 +25,55 @@
 
 
 
+        <!-- Navbar
+      ================================================== -->
+      <nav class="navbar navbar-style2 navbar-expand-lg">
+        <div class="container">
 
-    <!-- Navbar
-    ================================================== -->
-    <nav class="navbar navbar-style2 navbar-expand-lg">
-      <div class="container">
+          <a  href="#">
+            <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}" class="logo-1">
+          </a>
 
-        <a  href="#">
-          <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}" class="logo-1">
-        </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+          </button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fas fa-bars"></span>
-        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="" data-scroll-nav="0">Home <span class="sr-only">(current)</span></a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="" data-scroll-nav="0">Home <span class="sr-only">(current)</span></a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="1">About</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="1">About</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="3">Services</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="3">Services</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="4">Languages</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="4">Languages</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="5">Projects</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="5">Client</a>
-            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="6">Blog</a>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="6">Blog</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-scroll-nav="7">Contact</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-scroll-nav="7">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End Navbar
-    ================================================== -->
+      </nav>
+      <!-- End Navbar
+      ================================================== -->
 
 
     <!-- Header
@@ -108,10 +107,7 @@
         <div class="row">
 
           <div class="col-12 s-title-per-v2 text-center">
-            <h4 class="color-white">About</h4> <br/>
-            <div class="logo">
-              <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}">
-            </div>
+            <h4 class="color-white">About Gadget</h4> <br/>
           </div>
 
           <div class="col-lg-12 sm-mb-50">
@@ -199,302 +195,137 @@
     <!-- End Programming Languages
     ================================================== -->
 
-    <!-- Portfolio
-    ================================================== -->
-    <section class="portfolio portfolio-style2 section-padding ohidden" data-background-color="#121212" data-scroll-index='5'>
-      <div class="container">
-        <div class="row">
+    <!-- portfolio
+     ================================================== -->
+     <section class="portfolio section-padding ohidden" data-scroll-index='5'>
+       <div class="container">
+         <div class="row">
 
-          <div class="col-12 s-title-per-v2 text-center">
-            <p>Work</p>
-            <h4>My Portfolio .</h4>
+           <div class="col-12 section-title text-center">
+            <h6>See Gadget's Work</h6>
+            <h3>Recent Work</h3>
+            <span class="inner"></span>
           </div>
 
-          <div class="filtering text-center mb-30">
-            <button type="button" data-filter='*' class="active">All</button>
-            <button type="button" data-filter='.brand'>Brand</button>
-            <button type="button" data-filter='.web'>Design</button>
-            <button type="button" data-filter='.photo'>Photo</button>
-            <button type="button" data-filter='.video'>Video</button>
-          </div>
+           <div class="filtering text-center mb-30">
+             <button type="button" data-filter='*' class="active">All</button>
+             <button type="button" data-filter='.websites'>Websites</button>
+             <button type="button" data-filter='.desktop'>Desktop</button>
+             <button type="button" data-filter='.mobile'>Mobile</button>
+             <button type="button" data-filter='.IoT'>IoT</button>
+           </div>
 
-          <!-- gallery -->
-          <div class="gallery ohidden no-padding col-md-12">
+           <!-- gallery -->
 
-            <div class="col-lg-4 col-sm-6 mb-30 video web">
-              <div class="item-img">
-                <a class="single-image" href="assets/img/portfolio/1-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/1-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
+           <div class="gallery ohidden no-padding col-md-12">
+             {% for project in projects %}
+             <div class="col-lg-4 col-sm-6 mb-30 {{ project.category }}">
+               <div class="item-img">
+                 {% if project.id is not null %}
+                 <a href="{% url 'project_detail' project.id %}"></a>
+                 {% endif %}
+                 <div class="part-img">
+                   <img src="{{ project.image_thumbnail.url }}" alt="image">
+                   <div class="overlay-img">
+                     <div class="container">
+                       <h4>{{ project.title }}</h4>
+                       <p>{{ project.category }}</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             {% endfor %}
+           </div>
 
-            <div class="col-lg-4 col-sm-6 mb-30 brand">
-              <div class="item-img">
-                <a class="single-image" href="assets/img/portfolio/2-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/2-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 mb-30 photo web">
-              <div class="item-img video">
-                <a class="single-image" href="assets/img/portfolio/3-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/3-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 sm-mb-30 brand photo">
-              <div class="item-img video">
-                <a class="single-image" href="assets/img/portfolio/4-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/4-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 sm-mb-30 video">
-              <div class="item-img video">
-                <a class="single-image" href="assets/img/portfolio/5-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/5-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 photo">
-              <div class="item-img video">
-                <a class="single-image" href="assets/img/portfolio/6-2.jpg"></a>
-                <div class="part-img">
-                  <img src="assets/img/portfolio/6-2.jpg" alt="image">
-                  <div class="overlay-img">
-                    <h4>Web</h4>
-                    <h6>Creative Design</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- End Portfolio
-    ================================================== -->
-
-    <!-- testimonial
-    ================================================== -->
-    <section class="testimonial-style2 section-padding section-padding ohidden" data-background-color="#232323" data-scroll-index='6'>
-      <div class="container">
-        <div class="row">
-
-          <div class="col-12 s-title-per-v2 s-title-per-v2-w text-center">
-            <p>People Say !</p>
-            <h4>Testimonial.</h4>
-          </div>
-
-          <div class="col-md-10 offset-md-1">
-            <div class="owl-carousel owl-theme">
-              <div class="testimonial-item p-relative text-center">
-                <div class="icon mb-20">
-                  <i class="fas fa-comments fz-30"></i>
-                </div>
-                <p class="m-auto mb-20">Together. Fly that beast. Blessed evening lesser fish fowl male second under grass their saw day, brought upon bring fish fourth meat made our the.</p>
-                <div class="testimonial-author p-relative text-center mb-10">
-                  <h5 class="fz-16 fw600 mb-5">Jason Statham</h5>
-                  <h6 class="fz-14 fw500 color-white">Web Desinger</h6>
-                </div>
-              </div>
-
-              <div class="testimonial-item p-relative text-center">
-                <div class="icon mb-20">
-                  <i class="fas fa-comments fz-30"></i>
-                </div>
-                <p class="m-auto mb-20">Together. Fly that beast. Blessed evening lesser fish fowl male second under grass their saw day, brought upon bring fish fourth meat made our the.</p>
-                <div class="testimonial-author p-relative text-center mb-10">
-                  <h5 class="fz-16 fw600 mb-5">Jason Statham</h5>
-                  <h6 class="fz-14 fw500 color-white">Web Desinger</h6>
-                </div>
-              </div>
-
-              <div class="testimonial-item p-relative text-center">
-                <div class="icon mb-20">
-                  <i class="fas fa-comments fz-30"></i>
-                </div>
-                <p class="m-auto mb-20">Together. Fly that beast. Blessed evening lesser fish fowl male second under grass their saw day, brought upon bring fish fourth meat made our the.</p>
-                <div class="testimonial-author p-relative text-center mb-10">
-                  <h5 class="fz-16 fw600 mb-5">Jason Statham</h5>
-                  <h6 class="fz-14 fw500 color-white">Web Desinger</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- End testimonial
-    ================================================== -->
+         </div>
+       </div>
+     </section>
+     <!-- End portfolio
+     ================================================== -->
 
     <!-- Blog
     ================================================== -->
-    <section class="blog-style2 section-padding ohidden"  data-background-color="#121212" data-scroll-index='7'>
+    <section class="blog-style2 section-padding ohidden"  data-background-color="#121212" data-scroll-index='6'>
       <div class="container">
-        <div class="row">
 
           <div class="col-12 s-title-per-v2 text-center">
             <p>What's New !</p>
-            <h4>My Blog .</h4>
+            <h4><a href="{% url 'blog_home' %}">Gadget Blogs</a></h4>
           </div>
-
+          <div class="row row-eq-height">
+          {% for blog in blogs %}
           <div class="col-lg-4 sm-mb-50">
             <div class="blog-item p-relative b-radius-4">
               <div class="part-img p-relative ">
-                <img src="assets/img/blog/1.jpg" alt="">
+              {% if blog.id is not null %}
+                <a href="{% url 'blog_detail' blog.id %}">
+              {% else %}
+                <a class="nav-link" href="#" data-scroll-nav="6">
+              {% endif %}
+                  <img class="img-thumbnail img-circle" src="{{ blog.image.url }}" alt="">
+                </a>
               </div>
               <div class="content">
                 <div class="title">
-                  <h4 class="title-box mb-5"><a href="#">Latest Fashion Trends 2018</a></h4>
+                  <h4 class="title-box mb-5">
+                  {% if blog.id is not null %}
+                    <a href="{% url 'blog_detail' blog.id %}">{{ blog.title }}</a>
+                  {% else %}
+                    <a href="#" data-scroll-nav="6">{{ blog.title }}</a>
+                  {% endif %}
+                  </h4>
                 </div>
                 <div class="meta pb-20">
                   <ul>
-                    <li>04 April 2018</li>
-                    <li>By Admin</li>
+                    <li>{{ blog.pub_date }}</li>
+                    <br/>
+                    <li>By: {{ blog.author }}</li>
                   </ul>
                 </div>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which .</p>
-
-                <a href="#" class="red-more">Read More</a>
+                <p>{{ blog.summary }} ...</p>
+              {% if blog.id is not null %}
+                <a href="{% url 'blog_detail' blog.id %}" class="red-more">Read More</a>
+              {% else %}
+                <a class="red-more" href="#" data-scroll-nav="6">{{ blog.title }}</a>
+              {% endif %}
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 sm-mb-50">
-            <div class="blog-item p-relative b-radius-4">
-              <div class="part-img p-relative ">
-                <img src="assets/img/blog/2.jpg" alt="">
-              </div>
-              <div class="content">
-                <div class="title">
-                  <h4 class="title-box mb-5"><a href="#">Country big concert report</a></h4>
-                </div>
-                <div class="meta pb-20">
-                  <ul>
-                    <li>04 April 2018</li>
-                    <li>By Admin</li>
-                  </ul>
-                </div>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which .</p>
-
-                <a href="#" class="red-more">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="blog-item p-relative b-radius-4">
-              <div class="part-img p-relative ">
-                <img src="assets/img/blog/3.jpg" alt="">
-              </div>
-              <div class="content">
-                <div class="title">
-                  <h4 class="title-box mb-5"><a href="#">Server-Side Rendering</a></h4>
-                </div>
-                <div class="meta pb-20">
-                  <ul>
-                    <li>04 April 2018</li>
-                    <li>By Admin</li>
-                  </ul>
-                </div>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which .</p>
-
-                <a href="#" class="red-more">Read More</a>
-              </div>
-            </div>
-          </div>
-
+          {% endfor %}
         </div>
       </div>
     </section>
     <!-- End Blog
     ================================================== -->
 
+
     <!-- contact
     ================================================== -->
-    <section class="contact contact-default section-padding  ohidden"  data-background-color="#232323" data-scroll-index='8'>
+    <section class="contact contact-default section-padding  ohidden"  data-background-color="#232323" data-scroll-index='7'>
       <div class="container">
         <div class="row">
 
           <div class="col-12 s-title-per-v2 s-title-per-v2-w text-center">
             <p>Say Hello !</p>
-            <h4>Contact Me .</h4>
-          </div>
+            <h4>Contact Gadget @<h4>
+            <span class="inner"></span>
 
-          <div class="col-md-12">
-            <div class="contact-form p-relative">
-              <form class="form" id="contact-form" action="contact.php" data-toggle="validator">
-              <div class="messages"></div>
-                <div class="controls">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input id="form_name" type="text" name="name" placeholder="Name *" required="required" data-error="name is required."  data-background-color="#121212">
-                        <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <div class="form-group">
-                          <input id="form_email" type="email" name="email" placeholder="Email *" required="required" data-error="Valid email is required."  data-background-color="#121212">
-                          <div class="help-block with-errors"></div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-12">
-                      <div class="form-group">
-                          <input id="form_subject" type="text" name="subject" placeholder="subject"  data-background-color="#121212">
-                      </div>
-                    </div>
-
-                    <div class="col-md-12 form-group">
-                      <textarea id="form_message" name="text" class="form-control" placeholder=" Type Your Message " required="required" data-error="Please,leave us a message."  data-background-color="#121212"></textarea>
-                      <div class="help-block with-errors"></div>
-                    </div>
-
-                    <div class="col-md-12 text-center">
-                      <button><i class="jam jam-paper-plane-f"></i><span>Send Message</span></button>
-                    </div>
-
+            <div class="container">
+              <div class="center-block">
+                <div class="info-block text-center m-auto p-relative">
+                  <div class="icon">
+                    <div class="jam jam-envelope-f"></div>
+                  </div>
+                  <div class="text">
+                    <h5>Email Address:</h5>
+                    <p><a href="#">gadgetdevstudios@gmail.com</a></p>
+                    <span class="inner"></span>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -509,62 +340,17 @@
         <div class="row">
 
           <div class="brand text-center m-auto p-relative w-100">
-            <a href="#">
-              <img src="assets/img/logo-2.png" alt="logo" class="logo-1">
-            </a>
-          </div>
-
-          <div class="col-lg-12 mt-30">
-            <div class="part-info p-relative">
-              <div class="row">
-                <div class="col-md-4 sm-mb-30">
-                  <div class="info-block text-center m-auto p-relative">
-                    <div class="icon">
-                      <i class="jam jam-map-marker-f"></i>
-                    </div>
-                    <div class="text">
-                      <h5>My Location:</h5>
-                      <p>3481 Melrose Place, Beverly Hills CA</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4 sm-mb-30">
-                  <div class="info-block text-center m-auto p-relative">
-                    <div class="icon">
-                      <i class="jam jam-phone"></i>
-                    </div>
-                    <div class="text">
-                      <h5>Phone Number:</h5>
-                      <p>(+1) 517 397 7100</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                  <div class="info-block text-center m-auto p-relative">
-                    <div class="icon">
-                      <i class="jam jam-envelope-f"></i>
-                    </div>
-                    <div class="text">
-                      <h5>Email Address:</h5>
-                      <p><a href="#">info@demo.com</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="{{ front_page.logo_image.url }}" alt="{{ front_page.logo_alt }}">
           </div>
 
           <div class="scoial-icon text-center m-auto p-relative mt-30">
-            <a href="#0"><span><i class="fab fa-facebook-f"></i></span></a>
-            <a href="#0"><span><i class="fab fa-twitter"></i></span></a>
-            <a href="#0"><span><i class="fab fa-linkedin-in"></i></span></a>
-            <a href="#0"><span><i class="fab fa-google-plus-g"></i></span></a>
+          {% for social_network in social_networks %}
+            <a href="{{ social_network.link }}" target="_blank" class="t-shadow-1 color-white"><img src="{{ social_network.image.url }}" alt="{{ social_network.name }}" title="{{ social_network.name }}"></a>
+          {% endfor %}
           </div>
 
           <div class="cop text-center w-100 mt-30">
-            <h6 class="fz-14 fw500">© All Rights Reserved - 2018 ZYALL by Desing Grid.</h6>
+            <h6 class="fz-14 fw500">© All Rights Reserved - 2018 Gadget Development Studios LLC.</h6>
           </div>
 
         </div>
@@ -576,8 +362,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-    {% static 'css/style.css' %}
     <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
     <script src="{% static 'js/Migrate.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>

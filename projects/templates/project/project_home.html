@@ -64,29 +64,29 @@
          <div class="row">
 
            <div class="col-12 section-title text-center">
-            <h6>Gadget's Blogs</h6>
-            <h3>Blogs</h3>
+            <h6>Gadget's Projects</h6>
+            <h3>Projects</h3>
             <span class="inner"></span>
           </div>
 
            <!-- gallery -->
 
            <div class="gallery ohidden no-padding col-md-12">
-             {% for blog in blogs %}
+             {% for project in projects %}
              <div class="col-lg-4 col-sm-6 mb-30">
                <div class="item-img">
-                 {% if blog.id is not null %}
-                 <a href="{% url 'blog_detail' blog.id %}"></a>
+                 {% if project.id is not null %}
+                 <a href="{% url 'project_detail' project.id %}"></a>
                  {% endif %}
                  <div class="part-img">
-                   <img src="{{ blog.image_thumbnail.url }}" alt="image">
+                   <img src="{{ project.image_thumbnail.url }}" alt="image">
                    <div class="overlay-img">
                      <div class="container">
-                       <h4>{{ blog.title }}</h4>
+                       <h4>{{ project.title }}</h4>
                      </div>
                    </div>
                  </div>
-                 <p>{{ blog.summary }}...</p>
+                 <p>{{ project.summary }}...</p>
                </div>
              </div>
              {% endfor %}

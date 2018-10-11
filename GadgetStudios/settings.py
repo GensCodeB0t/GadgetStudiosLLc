@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'services_provided.apps.ServicesProvidedConfig',
     'social_networks.apps.SocialNetworksConfig',
     'frontpage.apps.FrontpageConfig',
+    'projects.apps.ProjectsConfig'
 ]
 
 MIDDLEWARE = [
